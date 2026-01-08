@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "ViewWarehouse";
+}
+<link href="~/css/warehouse.css" rel="stylesheet" />
+
+<div class="card-container">
+
+    <h1 class="page-title">Warehouses</h1>
+    <div class="section-title">Active Warehouses</div>
+
+    <!-- Search + Buttons -->
+    <div class="actions">
+        <input type="text" class="search" placeholder="🔍 Search">
+
+        <div>
+            <button class="btn btn-primary" data-bs-target="#addWarehouseModal" data-bs-toggle="modal">➕ Add New Warehouse</button>
+            <button class="btn-export">⬇ Export</button>
+        </div>
+    </div>
+
+
+    <!-- Add New Warehouse Modal -->
+<div class="modal fade" id="addWarehouseModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+
+            <!-- Header -->
+                <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add New Warehouse</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <label class="form-label">Warehouse Name</label>
+                <input type="text" class="form-control mb-3" placeholder="Enter Full Name">
+
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control mb-4" placeholder="Enter your Location">
+
+            </div>
+
+            <!-- Footer -->
+                <div class="modal-footer d-flex justify-content-end">
+                    <button class="btn btn-primary">Save </button>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+  <!-- Add New Warehouse Modal End -->
+
+
+    <!-- Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Warehouse ID</th>
+                    <th>Warehouse Name</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>REMA0123</td>
+                    <td><input type="checkbox"> Warehouse SV1, Austin</td>
+                    <td>Austin, Texas</td>
+                    <td class="actions-column">
+                        <i class="fa fa-edit text-primary cursor-pointer" data-bs-target="#addWarehouseModal1" data-bs-toggle="modal"></i>
+                        <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>REMA0123</td>
+                    <td><input type="checkbox"> Warehouse SV1, Houston</td>
+                    <td>Houston, Texas</td>
+                    <td class="actions-column">
+                        <i class="fa fa-edit text-primary cursor-pointer" data-bs-target="#addWarehouseModal1" data-bs-toggle="modal"></i>
+                        <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>REMA0123</td>
+                    <td><input type="checkbox"> Warehouse SV5, Vegas</td>
+                    <td>The Strip, Las Vegas</td>
+                    <td class="actions-column">
+                       <i class="fa fa-edit text-primary cursor-pointer" data-bs-target="#addWarehouseModal1" data-bs-toggle="modal"></i>
+                       <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>REMA0123</td>
+                    <td><input type="checkbox"> Warehouse SV10, New York</td>
+                    <td>Central Park, New York</td>
+                    <td class="actions-column">
+                        <i class="fa fa-edit text-primary cursor-pointer" data-bs-target="#addWarehouseModal1" data-bs-toggle="modal"></i>
+                        <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<!-- DELETE CONFIRMATION MODAL -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Delete Warehouse</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fs-5">
+                    Are you sure you want to delete  
+                    <strong id="deleteProductName"></strong> ?
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- EDIT WAREHOUSE MODAL -->
+<div class="modal fade" id="addWarehouseModal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+
+            <!-- Header -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Edit New Warehouse</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <label class="form-label">Warehouse Name</label>
+                <input type="text" class="form-control mb-3" placeholder="Enter Full Name">
+
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control mb-4" placeholder="Enter your Location">
+
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer d-flex justify-content-end">
+                <button class="btn btn-primary">Save </button>
+            </div>
+
+        </div>
+    </div>
+</div>
