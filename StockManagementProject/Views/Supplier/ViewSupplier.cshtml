@@ -1,0 +1,231 @@
+﻿@{
+    ViewData["Title"] = "ViewSupplier";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/supplier.css" rel="stylesheet" />
+
+<div class="container py-4">
+
+    <h1 class="fw-bold mb-4">Suppliers</h1>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="stat-box purple text-white">
+                <div>Active Suppliers</div>
+                <div class="stat-number">100</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="stat-box">
+                <div>Inactive Suppliers</div>
+                <div class="stat-number">19</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="stat-box">
+                <div>Deleted Suppliers</div>
+                <div class="stat-number">10</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="input-group" style="max-width: 300px;">
+            <span class="input-group-text">🔍</span>
+            <input type="text" class="form-control" placeholder="Search" />
+        </div>
+
+        <div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSupplierModal"> ➕Add New Supplie </button>
+            <button class="btn btn-primary">⬇ Export</button>
+        </div>
+    </div>
+
+
+    <!-- Add New Supplier Modal -->
+   <div class="modal fade" id="addSupplierModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+
+            <!-- Header -->
+                <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add New Supplier</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <label class="form-label">Supplier Name</label>
+                <input type="text" class="form-control mb-3" placeholder="Enter Supplier Name">
+
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control mb-3" placeholder="Enter your Address">
+
+                <label class="form-label">Supplier Sex</label>
+                <select class="form-select mb-4">
+                    <option selected>Select one</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+
+            </div>
+
+            <!-- Footer -->
+                <div class="modal-footer d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+
+
+        </div>
+    </div>
+</div>
+
+    <!-- ================= RESPONSIVE SUPPLIER TABLE ================= -->
+    <div class="table-responsive supplier-table-wrapper">
+    <table class="table table-hover align-middle text-nowrap inventory-table">
+            <thead class="table-light">
+                <tr>
+                    <th>Supplier ID</th>
+                    <th>Supplier Name</th>
+                    <th>Sex</th>
+                    <th>Address</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>BC2022110001</td>
+                    <td>
+                        <input type="checkbox" class="me-2">
+                        Phoenix Baker
+                    </td>
+                    <td>Female</td>
+                    <td>PP</td>
+                    <td class="text-center">
+                        <i class="fa fa-pen action-icon text-purple"
+                           data-bs-toggle="modal"
+                           data-bs-target="#editSupplierModal1"></i>
+                        <i class="fa fa-trash action-icon text-danger"
+                           data-bs-toggle="modal"
+                           data-bs-target="#deleteModal"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>BC2022110002</td>
+                    <td>
+                        <input type="checkbox" class="me-2">
+                        Lana Steiner
+                    </td>
+                    <td>Male</td>
+                    <td>USA</td>
+                    <td class="text-center">
+                        <i class="fa fa-pen action-icon text-purple"></i>
+                        <i class="fa fa-trash action-icon text-danger"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>BC2022110003</td>
+                    <td>
+                        <input type="checkbox" class="me-2">
+                        Demi Wilkinson
+                    </td>
+                    <td>Male</td>
+                    <td>Korean</td>
+                    <td class="text-center">
+                        <i class="fa fa-pen action-icon text-purple"></i>
+                        <i class="fa fa-trash action-icon text-danger"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>BC2022110004</td>
+                    <td>
+                        <input type="checkbox" class="me-2">
+                        Candice Wu
+                    </td>
+                    <td>Female</td>
+                    <td>France</td>
+                    <td class="text-center">
+                        <i class="fa fa-pen action-icon text-purple"></i>
+                        <i class="fa fa-trash action-icon text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+<!-- DELETE CONFIRMATION MODAL -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Delete Supplier</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fs-5">
+                    Are you sure you want to delete  
+                    <strong id="deleteProductName"></strong> ?
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- EDIT SUPPLIER MODAL -->
+<div class="modal fade" id="editSupplierModal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+
+            <!-- Header -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Edit New Supplier</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <label class="form-label">Supplier Name</label>
+                <input type="text" class="form-control mb-3" placeholder="Enter Supplier Name">
+
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control mb-3" placeholder="Enter your Address">
+
+                <label class="form-label">Supplier Sex</label>
+                <select class="form-select mb-4">
+                    <option selected>Select one</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer d-flex justify-content-end">
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>

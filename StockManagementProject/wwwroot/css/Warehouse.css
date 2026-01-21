@@ -1,0 +1,139 @@
+﻿/* warehouse.css */
+
+/* Card container */
+.card-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* Titles */
+.page-title {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.section-title {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Actions bar */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+    .actions input.search {
+        padding: 8px 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        flex: 1;
+        max-width: 250px;
+    }
+
+    .actions button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 5px;
+        font-size: 0.9em;
+    }
+
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-export {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+    table th, table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #f0f0f0;
+    }
+
+/* Actions icons */
+.actions-column i {
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+    .actions-column i:hover {
+        transform: scale(1.2);
+    }
+
+/* NEW — icon colors */
+.icon-purple {
+    color: #7a42f4;
+}
+
+.icon-red {
+    color: #e53935;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .actions input.search {
+            max-width: 100%;
+        }
+
+    table th, table td {
+        padding: 8px;
+    }
+}
+
+
+/* Inventory Table */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .inventory-table th {
+        background: #f0f0ff;
+        padding: 14px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .inventory-table td {
+        padding: 14px;
+        border-bottom: 1px solid #eee;
+    }

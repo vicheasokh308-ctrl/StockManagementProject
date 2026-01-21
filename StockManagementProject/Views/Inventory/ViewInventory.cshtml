@@ -1,0 +1,255 @@
+﻿@{
+    ViewData["Title"] = "ViewInventory";
+}
+<link href="~/css/inventory.css" rel="stylesheet" />
+
+<h1>Inventory Management</h1>
+
+<!-- Top Section -->
+<div class="top-area">
+
+    <input type="text" class="search-box" placeholder="Search">
+
+    <div class="btn-group-right">
+
+        <!-- Correct modal trigger -->
+        <button class="btn-round" data-bs-toggle="modal" data-bs-target="#addRoleModal">
+            <i class="fa fa-plus-circle"></i> Add New Stock
+        </button>
+
+        <button class="btn-round btn-purple">
+            <i class="fa fa-download"></i> Export
+        </button>
+    </div>
+
+</div>
+
+<!-- Add New Stock Inventory Modal -->
+<div class="modal fade" id="addRoleModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+
+            <!-- Header -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add Stock</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" class="form-control" placeholder="Enter product name">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">SKU</label>
+                    <input type="text" class="form-control" placeholder="Enter SKU code">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Quantity</label>
+                    <input type="number" class="form-control" placeholder="Enter quantity">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option selected disabled>Select Status</option>
+                        <option>In Stock</option>
+                        <option>Low Stock</option>
+                        <option>Out of Stock</option>
+                    </select>
+                </div>
+
+                 <div class="mb-3">
+                        <label for="productImage" class="form-label">Image</label>
+                        <input class="form-control" type="file" id="productImage">
+                   </div>
+
+            </div>
+
+            <!-- Footer -->
+           <div class="modal-footer d-flex justify-content-end">
+           <button class="btn btn-primary">Save </button>
+          </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- Add Role Modal End -->
+<!-- TABLE -->
+<table class="inventory-table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Sku</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <img src="/images/Inventory/Mouse.webp" class="product-img">
+                Wireless Mouse
+            </td>
+            <td>CBC001</td>
+            <td>10</td>
+            <td><span class="badge badge-success">In Stock</span></td>
+            <td class="action-icons">
+                <i class="fa fa-pen text-purple" data-bs-target="#editStockModal" data-bs-toggle="modal"></i>
+                <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="/images/Inventory/Chair.webp" class="product-img">
+                Office Chair
+            </td>
+            <td>OFC002</td>
+            <td>150</td>
+            <td><span class="badge badge-warning">Low Stock</span></td>
+            <td class="action-icons">
+                <i class="fa fa-pen text-purple" data-bs-target="#editStockModal" data-bs-toggle="modal"></i>
+                <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="/images/Inventory/Laptop_Computer.webp" class="product-img">
+                Laptop Computer
+            </td>
+            <td>LOP003</td>
+            <td>70</td>
+            <td><span class="badge badge-warning">Low Stock</span></td>
+            <td class="action-icons">
+                <i class="fa fa-pen text-purple" data-bs-target="#editStockModal" data-bs-toggle="modal"></i>
+                <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="/images/Inventory/Desktop_Computer.webp" class="product-img">
+                Desktop Computer
+            </td>
+            <td>DTC004</td>
+            <td>80</td>
+            <td><span class="badge badge-warning">Low Stock</span></td>
+            <td class="action-icons">
+                <i class="fa fa-pen text-purple" data-bs-target="#editStockModal" data-bs-toggle="modal"></i>
+                <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="/images/Inventory/Skin_Care.webp" class="product-img">
+                Skin Care
+            </td>
+            <td>SKN009</td>
+            <td>70</td>
+            <td><span class="badge badge-success">In Stock</span></td>
+            <td class="action-icons">
+                <i class="fa fa-pen text-purple" data-bs-target="#editStockModal" data-bs-toggle="modal"></i>
+                <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<!-- DELETE CONFIRMATION MODAL -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Delete Inventory</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fs-5">
+                    Are you sure you want to delete  
+                    <strong id="deleteProductName"></strong> ?
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- EDIT STOCK INVENTORY MODAL -->
+<div class="modal fade" id="editStockModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+
+            <!-- Header -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Edit Stock</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" class="form-control" placeholder="Enter product name">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">SKU</label>
+                    <input type="text" class="form-control" placeholder="Enter SKU code">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Quantity</label>
+                    <input type="number" class="form-control" placeholder="Enter quantity">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option selected disabled>Select Status</option>
+                        <option>In Stock</option>
+                        <option>Low Stock</option>
+                        <option>Out of Stock</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="productImage" class="form-label">Image</label>
+                    <input class="form-control" type="file" id="productImage">
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer d-flex justify-content-end">
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+﻿body {
+    background: #f5f5fa;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    width: 280px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 15px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Buttons */
+.btn-outline {
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .btn-outline:hover {
+        background: #f0f0f0;
+    }
+
+.btn-purple {
+    background: #6a3cf1;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .btn-purple:hover {
+        opacity: 0.85;
+    }
+
+/* Inventory Table */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .inventory-table thead {
+        background: #7d40ff;
+        color: white;
+    }
+
+    .inventory-table th {
+        padding: 14px;
+        font-weight: 600;
+    }
+
+    .inventory-table td {
+        padding: 16px;
+        border-bottom: 1px solid #eee;
+        vertical-align: middle;
+    }
+
+/* Product Image */
+.product-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge-green {
+    background: #dcf8e7;
+    color: #1ca94e;
+}
+
+.badge-orange {
+    background: #ffe7c2;
+    color: #ff8f00;
+}
+
+/* Unit Link */
+.unit-link {
+    color: #6a3cf1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Action Icons */
+.actions i {
+    font-size: 18px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.action-purple {
+    color: #6a3cf1;
+}
+
+.action-red {
+    color: #e63946;
+}
+
+
+/* Inventory Table */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .inventory-table th {
+        background: #f0f0ff;
+        padding: 14px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .inventory-table td {
+        padding: 14px;
+        border-bottom: 1px solid #eee;
+    }

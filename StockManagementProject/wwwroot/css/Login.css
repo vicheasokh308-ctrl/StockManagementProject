@@ -1,0 +1,196 @@
+﻿* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.login-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT SIDE */
+.left {
+    flex: 1;
+    background: #7c3aed;
+    color: white;
+    padding: 60px;
+    position: relative;
+}
+
+    .left h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .left p {
+        font-size: 18px;
+    }
+
+/* Chart */
+.chart-box {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    position: relative;
+}
+
+.bar {
+    width: 30px;
+    border-radius: 6px;
+}
+
+    .bar.red {
+        height: 80px;
+        background: #fb7185;
+    }
+
+    .bar.pink {
+        height: 130px;
+        background: #f9a8d4;
+    }
+
+    .bar.white {
+        height: 110px;
+        background: white;
+    }
+
+    .bar.tall {
+        height: 180px;
+    }
+
+.line {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+}
+
+/* RIGHT SIDE */
+.right {
+    flex: 1;
+    background: white;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .right h2 {
+        font-size: 28px;
+    }
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+    .options a {
+        color: #7c3aed;
+        text-decoration: none;
+    }
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #6d28d9;
+    }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .left {
+        text-align: center;
+        padding: 40px;
+    }
+
+    .chart-box {
+        justify-content: center;
+    }
+
+    .right {
+        padding: 40px;
+    }
+}
+/* OPTIONS (Checkbox + Forgot password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+    .remember input {
+        width: auto;
+        accent-color: #7c3aed; /* modern checkbox color */
+    }
+
+.forgot {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+    .forgot:hover {
+        text-decoration: underline;
+    }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .forgot {
+        margin-top: 8px;
+    }
+}

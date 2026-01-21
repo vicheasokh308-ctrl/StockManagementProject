@@ -1,0 +1,200 @@
+﻿@{
+    ViewData["Title"] = "ViewProduct";
+}
+<link href="~/css/product.css" rel="stylesheet" />
+
+
+<h1>ViewProduct</h1>
+
+<div class="top-bar d-flex justify-content-between align-items-center mb-3">
+    <input type="text" class="form-control w-50" placeholder="🔍 Search" />
+
+    <div class="top-buttons">
+        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#addProductModal">
+            <i class="fa fa-plus"></i> Add New Product
+        </button>
+
+        <button class="btn btn-purple">
+            <i class="fa fa-download"></i> Export
+        </button>
+    </div>
+</div>
+
+<table class="table table-striped inventory-table">
+    <thead>
+        <tr>
+            <th><input type="checkbox" /></th>
+            <th>Product Name</th>
+            <th>Product ID</th>
+            <th>Status</th>
+            <th>Unit</th>
+            <th>Cost Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody id="productTableBody">
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><img src="/images/Product/Droned_Vape.webp" class="product-img me-2"> Droned Vape</td>
+            <td>TUX001234</td>
+            <td><span class="badge bg-success">In Stock</span></td>
+            <td><a href="#" class="unit-link">Traditional Vapes</a></td>
+            <td>$4500</td>
+            <td>
+                <i class="fa fa-pen text-primary me-2 action-icon" role="button" data-bs-target="#addProductModal2" data-bs-toggle="modal"></i>
+                <i class="fa fa-trash text-danger action-icon" role="button" data-bs-target="#deleteModal" data-bs-toggle="modal"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- Add New Product Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add new Product</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+                <form id="addProductForm">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Product Name</label>
+                            <input type="text" id="productName" class="form-control" placeholder="Ex: Product Name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Unit</label>
+                            <input type="text" id="unit" class="form-control" placeholder="Enter Unit here">
+                        </div>
+                    </div>
+
+                     <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option selected disabled>Select Status</option>
+                        <option>In Stock</option>
+                        <option>Low Stock</option>
+                        <option>Out of Stock</option>
+                    </select>
+                </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Cost Price</label>
+                            <input type="number" id="costPrice" class="form-control" placeholder="Enter Cost Price">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Image</label>
+                            <input type="file" id="productImage" class="form-control">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- FOOTER BUTTONS -->
+            <div class="modal-footer d-flex justify-content-end">
+                <button class="btn btn-primary">Add Product</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Add / Edit Product Modal -->
+<div class="modal fade" id="addProductModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Edit new Product</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+                <form id="addProductForm">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Product Name</label>
+                            <input type="text" id="productName" class="form-control" placeholder="Ex: Product Name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Unit</label>
+                            <input type="text" id="unit" class="form-control" placeholder="Enter Unit here">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-select">
+                            <option selected disabled>Select Status</option>
+                            <option>In Stock</option>
+                            <option>Low Stock</option>
+                            <option>Out of Stock</option>
+                        </select>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Cost Price</label>
+                            <input type="number" id="costPrice" class="form-control" placeholder="Enter Cost Price">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Image</label>
+                            <input type="file" id="productImage" class="form-control">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- FOOTER BUTTONS -->
+            <div class="modal-footer d-flex justify-content-end">
+                <button class="btn btn-primary">Add Product</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+ <!-- DELETE CONFIRMATION MODAL -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Delete Product</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fs-5">
+                    Are you sure you want to delete  
+                    <strong id="deleteProductName"></strong> ?
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
