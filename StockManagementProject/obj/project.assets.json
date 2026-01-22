@@ -8467,11 +8467,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phonn Phyvisal\\OneDrive\\Pictures\\StockManagement\\StockManagementProject\\StockManagementProject.csproj",
+      "projectUniqueName": "C:\\clond\\StockManagementProject\\StockManagementProject\\StockManagementProject.csproj",
       "projectName": "StockManagementProject",
-      "projectPath": "C:\\Users\\Phonn Phyvisal\\OneDrive\\Pictures\\StockManagement\\StockManagementProject\\StockManagementProject.csproj",
+      "projectPath": "C:\\clond\\StockManagementProject\\StockManagementProject\\StockManagementProject.csproj",
       "packagesPath": "C:\\Users\\Phonn Phyvisal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Phonn Phyvisal\\OneDrive\\Pictures\\StockManagement\\StockManagementProject\\obj\\",
+      "outputPath": "C:\\clond\\StockManagementProject\\StockManagementProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

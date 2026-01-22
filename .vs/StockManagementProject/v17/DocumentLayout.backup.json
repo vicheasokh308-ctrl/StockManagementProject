@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\clond\\StockManagementProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|c:\\clond\\stockmanagementproject\\stockmanagementproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|solutionrelative:stockmanagementproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|c:\\clond\\stockmanagementproject\\stockmanagementproject\\models\\clsdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|solutionrelative:stockmanagementproject\\models\\clsdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|c:\\clond\\stockmanagementproject\\stockmanagementproject\\models\\clswarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|solutionrelative:stockmanagementproject\\models\\clswarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|c:\\clond\\stockmanagementproject\\stockmanagementproject\\models\\clsusermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|solutionrelative:stockmanagementproject\\models\\clsusermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|c:\\clond\\stockmanagementproject\\stockmanagementproject\\models\\clsspplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|solutionrelative:stockmanagementproject\\models\\clsspplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|c:\\clond\\stockmanagementproject\\stockmanagementproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F0E28A-EEDB-4A71-BB05-424916C6BA70}|StockManagementProject\\StockManagementProject.csproj|solutionrelative:stockmanagementproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\clond\\StockManagementProject\\StockManagementProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StockManagementProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\clond\\StockManagementProject\\StockManagementProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StockManagementProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T18:59:08.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsWarehouse.cs",
+              "DocumentMoniker": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsWarehouse.cs",
+              "RelativeDocumentMoniker": "StockManagementProject\\Models\\ClsWarehouse.cs",
+              "ToolTip": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsWarehouse.cs",
+              "RelativeToolTip": "StockManagementProject\\Models\\ClsWarehouse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:58:49.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClsUserManagement.cs",
+              "DocumentMoniker": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsUserManagement.cs",
+              "RelativeDocumentMoniker": "StockManagementProject\\Models\\ClsUserManagement.cs",
+              "ToolTip": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsUserManagement.cs",
+              "RelativeToolTip": "StockManagementProject\\Models\\ClsUserManagement.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:58:45.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClsSpplier.cs",
+              "DocumentMoniker": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsSpplier.cs",
+              "RelativeDocumentMoniker": "StockManagementProject\\Models\\ClsSpplier.cs",
+              "ToolTip": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsSpplier.cs",
+              "RelativeToolTip": "StockManagementProject\\Models\\ClsSpplier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:58:40.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClsDashboard.cs",
+              "DocumentMoniker": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsDashboard.cs",
+              "RelativeDocumentMoniker": "StockManagementProject\\Models\\ClsDashboard.cs",
+              "ToolTip": "C:\\clond\\StockManagementProject\\StockManagementProject\\Models\\ClsDashboard.cs",
+              "RelativeToolTip": "StockManagementProject\\Models\\ClsDashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:58:32.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\clond\\StockManagementProject\\StockManagementProject\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "StockManagementProject\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\clond\\StockManagementProject\\StockManagementProject\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "StockManagementProject\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:53:08.805Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "caX36dslDCc=",
+  "dgSpecHash": "Trm3XsuLYnc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Phonn Phyvisal\\OneDrive\\Pictures\\StockManagement\\StockManagementProject\\StockManagementProject.csproj",
+  "projectFilePath": "C:\\clond\\StockManagementProject\\StockManagementProject\\StockManagementProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Phonn Phyvisal\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Phonn Phyvisal\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
